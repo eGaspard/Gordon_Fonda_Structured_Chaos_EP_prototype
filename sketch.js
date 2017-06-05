@@ -8,7 +8,8 @@ function preload() {
 }
 
 function setup() {
-    //noLoop();
+    noLoop();
+    text("[p]: play/pause | [left mouse]: reset drawing | build for chrome",10,height-10);
     cnv = createCanvas(window.innerWidth,window.innerHeight);
     fft = new p5.FFT(0.9,1024);
     amp = new p5.Amplitude(0.99);
