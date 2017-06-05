@@ -8,7 +8,7 @@ function preload() {
 }
 
 function setup() {
-    noLoop();
+    //noLoop();
     cnv = createCanvas(window.innerWidth,window.innerHeight);
     fft = new p5.FFT(0.9,1024);
     amp = new p5.Amplitude(0.99);
