@@ -4,7 +4,7 @@ var speed = 0.005;
 
 
 function preload() {
-    song = loadSound("music/strc.wav");
+    song = loadSound("music/strc320.mp3");
 }
 
 function setup() {
