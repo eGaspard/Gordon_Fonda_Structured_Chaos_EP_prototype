@@ -1,16 +1,15 @@
-var cnv;
 var angle = 0;
 var speed = 0.005;
 
 
 function preload() {
-    song = loadSound("music/strc320.mp3");
+    song = loadSound("music/strc.wav");
 }
 
 function setup() {
-    noLoop();
-    text("[p]: play/pause | [left mouse]: reset drawing | build for chrome",10,height-10);
-    cnv = createCanvas(window.innerWidth,window.innerHeight);
+    song.loop();
+    //text("[p]: play/pause | [left mouse]: reset drawing | build for chrome",10,height-10);
+    createCanvas(windowWidth,windowHeight);
     fft = new p5.FFT(0.9,1024);
     amp = new p5.Amplitude(0.99);
 
@@ -20,7 +19,7 @@ function setup() {
 }
 
 //---press "p" to play/stop music---//
-function keyTyped() {
+/*function keyTyped() {
     if (key === "p") {
         if (song.isPlaying()) {
             song.pause();
@@ -30,12 +29,12 @@ function keyTyped() {
             loop();
         }
     }
-}
+}*/
 
 function mousePressed() {
   clear();
   fill(255)
-  text("[p]: play/pause | [left mouse]: reset drawing | build for chrome",10,height-10);
+  //text("[p]: play/pause | [left mouse]: reset drawing | build for chrome",10,height-10);
   console.log("clear")
 }
 
@@ -58,9 +57,6 @@ function draw() {
     var l0 = map(mouseX,0,width,0,300);
     var l1 = map(mouseY,0,height,0,300);
 
-    c2 = color(102, 0, 255);//lila
-    c1 = color(218, 165, 32);//goldenrod
-    c3 = color(255, 102, 102);//pink
     c4 = color(0);
     
     push();
@@ -114,4 +110,5 @@ function draw() {
     
     
 }
+
 
